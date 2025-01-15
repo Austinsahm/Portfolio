@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 // import { ThemeSwitcher } from "@/components/theme-switcher";
@@ -15,9 +15,10 @@ import Navbar from "@/components/navbar";
 //   subsets: ["latin"],
 // });
 
-const geistSans = Geist({
-  display: "swap",
+const poppinsFont = Poppins({
   subsets: ["latin"],
+  weight: "400",
+  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
@@ -32,7 +33,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={geistSans.className} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${poppinsFont.variable}`}
+      suppressHydrationWarning
+    >
       <body className="bg-background text-foreground">
         <ThemeProvider
           attribute="class"
