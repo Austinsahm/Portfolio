@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Instagram } from "lucide-react";
-// import { Toaster } from "@/components/ui/toaster";
 
 export default function Contact() {
 
