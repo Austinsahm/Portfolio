@@ -8,21 +8,24 @@ import "swiper/css/navigation";
 import Link from "next/link";
 import { projectData } from "@/data/project";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function Projects() {
   const { webProjects, uiuxProjects, graphicProjects } = projectData;
 
   const renderProjects = (projects) => (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-      {projects.map((project, index) => (
+      {projects.map((project) => (
         <div
-          key={index}
+          key={project.id}
           className="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800 pb-2"
         >
-          <img
+          <Image
             src={project.image}
             alt={project.title}
             className="object-cover w-full h-48 transition-transform duration-300 group-hover:scale-105"
+            width={500} // Adjust width according to your needs
+            height={192} // Adjust height according to your needs
           />
           <div className="p-4 ">
             <h3 className="font-bold text-lg ">{project.title}</h3>
@@ -49,13 +52,15 @@ export default function Projects() {
       modules={[Pagination, Navigation]}
       className="w-full"
     >
-      {projects.map((project, index) => (
+      {projects.map((project) => (
         <SwiperSlide key={project.id}>
           <div className="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800 pb-4">
-            <img
+            <Image
               src={project.image}
               alt={project.title}
               className="object-cover w-full h-48 transition-transform duration-300 group-hover:scale-105"
+              width={500} // Adjust width according to your needs
+              height={192} // Adjust height according to your needs
             />
             <div className="p-4">
               <h3 className="font-bold text-lg">{project.title}</h3>
