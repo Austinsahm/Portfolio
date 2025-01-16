@@ -2,8 +2,14 @@ import { findProjectById } from "@/data/project";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-export default function ProjectDetails({ params }: { params: { id: string } }) {
-  const project = findProjectById(params.id);
+export default async function ProjectDetails({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  // const project = findProjectById(id);
+  const id = (await params).id;
+  const project = findProjectById(id);
 
   console.log(project + " Im Here");
 
