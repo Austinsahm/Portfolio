@@ -3,5 +3,7 @@ export interface Project {
   title: string;
   description: string;
   image: string;
+  largeImage?: string;
+  liveWebsite?: string;
   details: string;
 }

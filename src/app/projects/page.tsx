@@ -84,7 +84,9 @@ export default function Projects() {
     <main className="flex min-h-screen flex-col items-center justify-center pt-20 p-8 md:p-24 bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
       <section className="w-full max-w-5xl">
         <header className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">My Projects</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
+            My Projects
+          </h1>
           <p className="text-lg text-gray-400">
             A showcase of my work in Web Development, UI/UX Design, and Graphic
             Design.

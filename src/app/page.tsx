@@ -9,6 +9,7 @@ import {
   Github,
   Instagram,
   Linkedin,
+  Mail,
   Twitter,
 } from "lucide-react";
 
@@ -88,7 +89,7 @@ export default function Home() {
           transition={{ delay: 1.2, duration: 0.8 }}
         >
           <a
-            href="https://github.com"
+            href="https://github.com/Austinsahm"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-colors"
@@ -97,7 +98,7 @@ export default function Home() {
             <span className="sr-only">GitHub</span>
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/oluwamayowa-oladeji-9a749a221/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-colors"
@@ -106,7 +107,7 @@ export default function Home() {
             <span className="sr-only">LinkedIn</span>
           </a>
           <a
-            href="https://twitter.com"
+            href="https://x.com/austinsamuel733"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-colors"
@@ -120,8 +121,15 @@ export default function Home() {
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-colors"
           >
-            <Instagram className="h-6 w-6" />
+            <Instagram className="h-8 w-8" />
             <span className="sr-only">Instagram</span>
+          </a>
+          <a
+            href="mailto:austinsamuel733@gmail.com"
+            className="text-gray-400 hover:text-white transition-colors"
+          >
+            <Mail className="h-8 w-8" />
+            <span className="sr-only">Email</span>
           </a>
         </motion.div>
       </motion.div>
