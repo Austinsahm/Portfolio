@@ -9,11 +9,12 @@ import Link from "next/link";
 import { projectData } from "@/data/project";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { Project } from "@/data/types";
 
 export default function Projects() {
   const { webProjects, uiuxProjects, graphicProjects } = projectData;
 
-  const renderProjects = (projects) => (
+  const renderProjects = (projects: Project[]) => (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       {projects.map((project) => (
         <div
@@ -43,7 +44,7 @@ export default function Projects() {
     </div>
   );
 
-  const renderCarousel = (projects) => (
+  const renderCarousel = (projects: Project[]) => (
     <Swiper
       spaceBetween={16}
       slidesPerView={1}

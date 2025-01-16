@@ -11,7 +11,7 @@ export default async function ProjectDetails({
   const id = (await params).id;
   const project = findProjectById(id);
 
-  console.log(project + " Im Here");
+  // console.log(project + " Im Here");
 
   if (!project) {
     notFound(); // Return a 404 page if the project is not found
