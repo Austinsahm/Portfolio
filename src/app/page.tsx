@@ -121,14 +121,14 @@ export default function Home() {
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-colors"
           >
-            <Instagram className="h-8 w-8" />
+            <Instagram className="h-6 w-6" />
             <span className="sr-only">Instagram</span>
           </a>
           <a
             href="mailto:austinsamuel733@gmail.com"
             className="text-gray-400 hover:text-white transition-colors"
           >
-            <Mail className="h-8 w-8" />
+            <Mail className="h-6 w-6" />
             <span className="sr-only">Email</span>
           </a>
         </motion.div>
