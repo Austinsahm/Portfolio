@@ -14,7 +14,7 @@ import {
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-8 md:p-24 bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
+    <main className="flex min-h-screen flex-col items-center justify-center p-8 xs:pt-16 md:p-24 bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
 
       <motion.div
