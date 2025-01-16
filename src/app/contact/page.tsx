@@ -1,38 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send, Instagram } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/components/ui/use-toast";
-import { Toaster } from "@/components/ui/toaster";
+import { Mail, Phone, MapPin, Instagram } from "lucide-react";
+// import { Toaster } from "@/components/ui/toaster";
 
 export default function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-
-    toast({
-      title: "Message Sent!",
-      description: "Thanks for reaching out. I'll get back to you soon!",
-    });
-
-    setName("");
-    setEmail("");
-    setMessage("");
-    setIsSubmitting(false);
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white pt-20 p-8 md:p-24">
@@ -129,7 +102,7 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          <motion.div
+          {/* <motion.div
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.5 }}
@@ -220,10 +193,10 @@ export default function Contact() {
                 )}
               </Button>
             </form>
-          </motion.div>
+          </motion.div> */}
         </div>
       </motion.div>
-      <Toaster />
+      {/* <Toaster /> */}
     </div>
   );
 }
