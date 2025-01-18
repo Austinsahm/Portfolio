@@ -17,10 +17,10 @@ const menuLinks = [
 ];
 
 export default function Menu() {
-  const container = useRef();
+  const container = useRef<HTMLDivElement | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const tl = useRef();
+  const tl = useRef<gsap.core.Timeline | null>(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -50,9 +50,9 @@ export default function Menu() {
 
   useEffect(() => {
     if (isMenuOpen) {
-      tl.current.play();
+      tl.current?.play();
     } else {
-      tl.current.reverse();
+      tl.current?.reverse();
     }
   }, [isMenuOpen]);
 
