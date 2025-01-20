@@ -59,7 +59,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-100 hover:text-blue-600 focus:outline-none"
             >
               {isOpen ? (
                 <X className="block h-6 w-6" aria-hidden="true" />
