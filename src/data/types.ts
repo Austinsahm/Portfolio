@@ -4,6 +4,16 @@ export interface Project {
   description: string;
   image: string;
   largeImage?: string;
-  liveWebsite?: string;
+  demo?: string;
+  code?: string;
   details: string;
+  pictures?: Pictures[];
+  tags?: [string];
+}
+
+export interface Pictures {
+  id: string;
+  url: string;
+  name: string;
+  description: string;
 }

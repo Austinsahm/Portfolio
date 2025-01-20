@@ -3,10 +3,27 @@ export const projectData = {
     {
       id: "wp1",
       title: "My Portfolio",
-      description: "Built with Next.js",
+      description: "Built with Next.js and framer motion",
       image: "/Portfolio.jpg",
       details:
         "This is a personal portfolio website built with Next.js, showcasing my web development, UI/UX design, and graphic design projects. It includes interactive elements, smooth transitions, and a responsive layout to provide a seamless experience across all devices. The website also leverages Next.js' server-side rendering for fast performance and SEO optimization.",
+      tags: ["Next.js", "Framer Motion", "React", "JavaScript"],
+      demo: "https://portfolio-oladeji-oluwamayowa-samuels-projects.vercel.app/",
+      code: "https://github.com/Austinsahm/Portfolio.git",
+      pictures: [
+        {
+          id: "1",
+          url: "/projectPage.jpg",
+          name: "Project Page",
+          description: "Project Page",
+        },
+        {
+          id: "2",
+          url: "/aboutPage.jpg",
+          name: "About Page",
+          description: "About Page",
+        },
+      ],
     },
     {
       id: "wp2",
@@ -120,6 +137,6 @@ export const findProjectById = (id: string) => {
     ...projectData.graphicProjects,
   ];
 
-  console.log(allProjects, "All Projects"); // Log all projects
+  // console.log(allProjects, "All Projects"); // Log all projects
   return allProjects.find((project) => project.id === id);
 };
