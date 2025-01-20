@@ -43,6 +43,12 @@ export default function Projects() {
     return () => clearTimeout(scrollTimer);
   }, [activeTab]);
 
+  const truncateText = (text: string, maxLength: number) => {
+    return text.length > maxLength
+      ? `${text.substring(0, maxLength)}...`
+      : text;
+  };
+
   const renderProjects = (projects: Project[]) => (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       {projects.map((project) => (
@@ -59,7 +65,10 @@ export default function Projects() {
           />
           <div className="p-4 ">
             <h3 className="font-bold text-lg ">{project.title}</h3>
-            <p className="text-sm text-gray-400 mb-4">{project.description}</p>
+            <p className="text-sm text-gray-400 mb-4">
+              {" "}
+              {truncateText(project.description, 40)}
+            </p>
             <Button className="">
               <Link href={`/projects/${project.id}`}>View Details</Link>
             </Button>
@@ -91,7 +100,7 @@ export default function Projects() {
             <div className="p-4">
               <h3 className="font-bold text-lg">{project.title}</h3>
               <p className="text-sm text-gray-400 mb-4">
-                {project.description}
+                {truncateText(project.description, 40)}
               </p>
               <Button className="mb-1">
                 <Link href={`/projects/${project.id}`}>View Details</Link>

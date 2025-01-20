@@ -55,15 +55,71 @@ export const projectData = {
       tags: ["Figma", "Photoshop"],
       details:
         "This project involved creating a comprehensive dashboard UI/UX prototype using Figma for a social media platform. The design prioritizes user engagement and ease of navigation, with a focus on key features such as notifications, posts, messaging, and analytics. The dashboard includes a dark mode option for enhanced user experience and accessibility.",
+      pictures: [
+        {
+          id: "1",
+          url: "/Desktop - 6.jpg",
+          name: "Dashboard",
+          description: "Dashboard",
+        },
+      ],
     },
     {
       id: "uiux2",
-      title: "Landing Page UI/UX",
-      description: "Landing page for a company that sells tyres and batteries",
-      image: "/Obat.jpg",
+      title: "CryptoTrade Hub",
+      description: "A web-based process for cryptocurrency exchange.",
+      image: "/CryptoTrade.jpg",
       tags: ["Figma", "Photoshop", "Illustrator"],
-      details:
-        "For this project, I designed a high-converting landing page for a company specializing in tyres and batteries. The page highlights the company’s best-selling products, promotions, and customer testimonials. The layout is clean, with strong calls to action and easy navigation, ensuring customers can find the products they need with ease.",
+      details: `A web-based process that captures the following steps. The design should focus on clarity, functionality, and a strong user experience while incorporating branding for a fictional company of your choice:
+      
+    1. **Client Initiates Contact**:  
+       John contacts a company to purchase 200,000 USDT using NGN.
+       
+    2. **Quotation and Negotiation**:  
+       - The company provides an initial quote.  
+       - John rejects the quote and negotiates for a better rate.
+       
+    3. **Rate Acceptance**:  
+       A mutually agreed rate is accepted.
+       
+    4. **Transaction Details Exchange**:  
+       - The company sends its bank account details for John to deposit the NGN.  
+       - John provides his crypto wallet address for the USDT settlement.
+       
+    5. **Transaction Completion**:  
+       The transaction is successfully completed.`,
+      pictures: [
+        {
+          id: "1",
+          url: "/CryptoTrade 1.jpg",
+          name: "Landing Page",
+          description: "Landing Page showcasing the exchange process.",
+        },
+        {
+          id: "2",
+          url: "/CryptoTrade 2.jpg",
+          name: "Landing Page",
+          description: "Landing Page showcasing the exchange process.",
+        },
+        {
+          id: "3",
+          url: "/CryptoTrade 3.jpg",
+          name: "Landing Page",
+          description: "Landing Page showcasing the exchange process.",
+        },
+        {
+          id: "4",
+          url: "/CryptoTrade 4.jpg",
+          name: "Landing Page",
+          description: "Landing Page showcasing the exchange process.",
+        },
+        {
+          id: "5",
+          url: "/CryptoTrade 5.jpg",
+          name: "Landing Page",
+          description: "Landing Page showcasing the exchange process.",
+        },
+      ],
     },
     {
       id: "uiux3",
@@ -80,6 +136,23 @@ export const projectData = {
           url: "/Desktop - 1.jpg",
           name: "Home Page",
           description: "Home Page",
+        },
+      ],
+    },
+    {
+      id: "uiux4",
+      title: "Landing Page UI/UX",
+      description: "Landing page for a company that sells tyres and batteries",
+      image: "/Obat.jpg",
+      tags: ["Figma", "Photoshop", "Illustrator"],
+      details:
+        "For this project, I designed a high-converting landing page for a company specializing in tyres and batteries. The page highlights the company’s best-selling products, promotions, and customer testimonials. The layout is clean, with strong calls to action and easy navigation, ensuring customers can find the products they need with ease.",
+      pictures: [
+        {
+          id: "1",
+          url: "/OBAT Full.jpg",
+          name: "Landing Page",
+          description: "Landing Page",
         },
       ],
     },
