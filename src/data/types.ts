@@ -1,4 +1,4 @@
-export interface Project {
+export type Project = {
   id: string;
   title: string;
   description: string;
@@ -7,13 +7,11 @@ export interface Project {
   demo?: string;
   code?: string;
   details: string;
-  pictures?: Pictures[];
-  tags?: [string];
-}
-
-export interface Pictures {
-  id: string;
-  url: string;
-  name: string;
-  description: string;
-}
+  tags?: string[];
+  pictures?: {
+    id: string;
+    url: string;
+    name?: string;
+    description?: string;
+  }[];
+};
