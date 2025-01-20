@@ -7,7 +7,7 @@ export const projectData = {
       image: "/Portfolio.jpg",
       details:
         "This is a personal portfolio website built with Next.js, showcasing my web development, UI/UX design, and graphic design projects. It includes interactive elements, smooth transitions, and a responsive layout to provide a seamless experience across all devices. The website also leverages Next.js' server-side rendering for fast performance and SEO optimization.",
-      tags: ["Next.js", "Framer Motion", "React", "JavaScript"],
+      tags: ["Next.js", "Framer Motion", "React", "TypeScript"],
       demo: "https://portfolio-oladeji-oluwamayowa-samuels-projects.vercel.app/",
       code: "https://github.com/Austinsahm/Portfolio.git",
       pictures: [
@@ -52,6 +52,7 @@ export const projectData = {
       title: "Dashboard UI/UX",
       description: "Figma prototype for an All-In-One Social Media Platform",
       image: "/Social Software Dashboard.jpg",
+      tags: ["Figma", "Photoshop"],
       details:
         "This project involved creating a comprehensive dashboard UI/UX prototype using Figma for a social media platform. The design prioritizes user engagement and ease of navigation, with a focus on key features such as notifications, posts, messaging, and analytics. The dashboard includes a dark mode option for enhanced user experience and accessibility.",
     },
@@ -60,6 +61,7 @@ export const projectData = {
       title: "Landing Page UI/UX",
       description: "Landing page for a company that sells tyres and batteries",
       image: "/Obat.jpg",
+      tags: ["Figma", "Photoshop", "Illustrator"],
       details:
         "For this project, I designed a high-converting landing page for a company specializing in tyres and batteries. The page highlights the company’s best-selling products, promotions, and customer testimonials. The layout is clean, with strong calls to action and easy navigation, ensuring customers can find the products they need with ease.",
     },
@@ -69,8 +71,17 @@ export const projectData = {
       description: "Landing page for a demo crypto company",
       image: "/Krypto.jpg",
       largeImage: "/Desktop - 1.jpg",
+      tags: ["Figma"],
       details:
         "The Krypto Landing Page was designed for a demo crypto company. The design aims to attract investors and potential users by offering a modern, sleek interface with clear and concise information. The landing page features an interactive token calculator, current market prices, and a prominent call-to-action to join the platform. The design focuses on trust-building with a secure and professional aesthetic.",
+      pictures: [
+        {
+          id: "1",
+          url: "/Desktop - 1.jpg",
+          name: "Home Page",
+          description: "Home Page",
+        },
+      ],
     },
   ],
   graphicProjects: [
@@ -79,6 +90,7 @@ export const projectData = {
       title: "TFC Poster",
       description: "Brand Flyer (Fashion)",
       image: "/TFC.jpg",
+      tags: ["Photoshop", "Illustrator"],
       details:
         "This fashion poster was created for Tee Famous Collection (TFC), a fashion brand. The design captures the brand’s youthful and trendy spirit, incorporating bold typography, striking colors, and modern graphics. The flyer promotes the latest collection, with a focus on casual wear, and is designed to capture the attention of fashion enthusiasts.",
     },
@@ -87,6 +99,7 @@ export const projectData = {
       title: "AKA GENTS Poster",
       description: "Brand Flyer (Fashion)",
       image: "/Aka Gents.jpg",
+      tags: ["Photoshop", "Illustrator"],
       details:
         "This poster was created for AKA GENTS, a limited training program for aspiring gentlemen. The design incorporates sophisticated typography, elegant color schemes, and imagery that reflects the brand’s upscale, exclusive nature. The flyer aims to evoke a sense of professionalism and luxury, encouraging people to sign up for the limited slots available.",
     },
@@ -95,6 +108,7 @@ export const projectData = {
       title: "STUNNING Church Poster",
       description: "Church Flyer",
       image: "/Church Poster v2.jpg",
+      tags: ["Photoshop", "Illustrator"],
       details:
         "This church flyer promotes an upcoming event at STUNNING Church. The design combines a spiritual and welcoming theme, featuring serene imagery and uplifting typography. The poster aims to invite community members to worship, prayer meetings, and special events, with clear event details and contact information.",
     },
@@ -103,6 +117,7 @@ export const projectData = {
       title: "Burger Poster",
       description: "Fast Food Flyer",
       image: "/Burger.jpg",
+      tags: ["Photoshop", "Illustrator"],
       details:
         "This poster was created for a fast food restaurant offering a variety of burgers. The design uses vibrant colors and mouth-watering images of the burgers to entice customers. Bold, clear typography highlights special offers and promotions, ensuring the flyer grabs attention and drives foot traffic to the restaurant.",
     },
@@ -111,6 +126,7 @@ export const projectData = {
       title: "Opium Pearl",
       description: "Beauty Product",
       image: "/Perfume.jpg",
+      tags: ["Photoshop", "Illustrator"],
       details:
         "This beauty product poster was designed for Opium Pearl, a luxury fragrance brand. The design features elegant, minimalistic imagery with a focus on the perfume bottle and its opulent packaging. The flyer’s goal is to evoke a sense of luxury and sophistication, enticing customers to try the new fragrance.",
     },
@@ -119,6 +135,7 @@ export const projectData = {
       title: "Beauty Poster",
       description: "Beauty Product",
       image: "/Beauty Poster.jpg",
+      tags: ["Photoshop", "Illustrator"],
       details:
         "This beauty poster was created to promote a new line of skincare products. The design focuses on clean lines, soft pastel colors, and a natural aesthetic, emphasizing the purity and effectiveness of the beauty products. The poster highlights key ingredients and benefits, encouraging customers to explore the range.",
     },
@@ -127,6 +144,7 @@ export const projectData = {
       title: "NIKE Poster",
       description: "Brand Flyer",
       image: "/Nike Shoe.jpg",
+      tags: ["Photoshop", "Illustrator"],
       details:
         "This brand flyer was designed for Nike to promote their latest shoe collection. The design incorporates bold imagery, strong typography, and energetic visuals to reflect the athletic and performance-driven nature of the brand. The flyer showcases the shoes in action, targeting fitness enthusiasts and sports lovers.",
     },

@@ -105,7 +105,7 @@ export default function Projects() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center pt-20 p-8 md:p-24 bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
-      <section className="w-full max-w-5xl">
+      <section className="w-full max-w-7xl">
         <header className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
             My Projects
@@ -117,7 +117,7 @@ export default function Projects() {
         </header>
 
         <div className="sticky top-16 bg-gray-900 z-10 p-4 shadow-md mb-8">
-          <div className="max-w-5xl mx-auto flex justify-center space-x-4">
+          <div className="max-w-7xl mx-auto flex justify-center space-x-4">
             {categories.map((category) => (
               <button
                 key={category.id}

@@ -17,10 +17,12 @@ export default async function ProjectDetails({
 
   return (
     <main className="min-h-screen pt-20 p-8 md:p-24 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* Project Title */}
         {project.title && (
-          <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
+            {project.title}
+          </h1>
         )}
 
         {/* Main Project Image */}
@@ -29,6 +31,7 @@ export default async function ProjectDetails({
           alt={project.title || "Project Image"}
           className="w-full rounded-lg shadow-lg mb-8"
           priority
+          unoptimized
           width={500}
           height={300}
         />
@@ -88,23 +91,26 @@ export default async function ProjectDetails({
 
         {/* Project Gallery */}
         {project.pictures && project.pictures.length > 0 && (
-          <div>
+          <div className="w-full">
             <h2 className="text-2xl font-semibold mb-4">Project Gallery</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-6">
               {project.pictures.map((picture) => (
                 <div key={picture.id} className="relative">
-                  <Image
-                    src={picture.url || "/placeholder.svg"}
-                    alt={picture.name || "Project Image"}
-                    width={400}
-                    height={300}
-                    className="rounded-lg shadow-md"
-                  />
                   {picture.description && (
-                    <p className="mt-2 text-sm text-gray-400">
+                    <p className="mb-2 text-md text-gray-400">
                       {picture.description}
                     </p>
                   )}
+                  <Image
+                    src={picture.url || "/placeholder.svg"}
+                    alt={picture.name || "Project Image"}
+                    width={500}
+                    height={0}
+                    style={{ height: "auto" }}
+                    unoptimized
+                    priority
+                    className="rounded-lg shadow-md w-full"
+                  />
                 </div>
               ))}
             </div>
