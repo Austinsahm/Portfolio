@@ -3,8 +3,13 @@ import { Project } from "@/data/types";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-export default function ProjectDetails({ params }: { params: { id: string } }) {
-  const project: Project | undefined = findProjectById(params.id);
+export default async function ProjectDetails({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const id = (await params).id;
+  const project: Project | undefined = findProjectById(id);
 
   if (!project) {
     notFound(); // Return a 404 page if the project is not found

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -9,10 +10,38 @@ import Link from "next/link";
 import { projectData } from "@/data/project";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { Project } from "@/data/types";
+import type { Project } from "@/data/types";
+
+const categories = [
+  { id: "web", name: "Web Development" },
+  { id: "uiux", name: "UI/UX Design" },
+  { id: "graphic", name: "Graphic Design" },
+];
 
 export default function Projects() {
   const { webProjects, uiuxProjects, graphicProjects } = projectData;
+  const [activeTab, setActiveTab] = useState("web");
+  const refs = {
+    web: useRef<HTMLDivElement>(null),
+    uiux: useRef<HTMLDivElement>(null),
+    graphic: useRef<HTMLDivElement>(null),
+  };
+
+  useEffect(() => {
+    const scrollTimer = setTimeout(() => {
+      if (refs[activeTab as keyof typeof refs].current) {
+        const targetElement = refs[activeTab as keyof typeof refs].current;
+        if (targetElement) {
+          const elementRect = targetElement.getBoundingClientRect();
+          const absoluteElementTop = elementRect.top + window.pageYOffset;
+          const middle = absoluteElementTop - window.innerHeight / 4;
+          window.scrollTo({ top: middle, behavior: "smooth" });
+        }
+      }
+    }, 100);
+
+    return () => clearTimeout(scrollTimer);
+  }, [activeTab]);
 
   const renderProjects = (projects: Project[]) => (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -22,21 +51,17 @@ export default function Projects() {
           className="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800 pb-2"
         >
           <Image
-            src={project.image}
+            src={project.image || "/placeholder.svg"}
             alt={project.title}
             className="object-cover w-full h-48 transition-transform duration-300 group-hover:scale-105"
-            width={500} // Adjust width according to your needs
-            height={192} // Adjust height according to your needs
+            width={500}
+            height={192}
           />
           <div className="p-4 ">
             <h3 className="font-bold text-lg ">{project.title}</h3>
             <p className="text-sm text-gray-400 mb-4">{project.description}</p>
             <Button className="">
-              <Link href={`/projects/${project.id}`}>
-                {/* <a className="text-blue-400 underline mt-2 inline-block"> */}
-                View Details
-                {/* </a> */}
-              </Link>
+              <Link href={`/projects/${project.id}`}>View Details</Link>
             </Button>
           </div>
         </div>
@@ -57,20 +82,18 @@ export default function Projects() {
         <SwiperSlide key={project.id}>
           <div className="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800 pb-4">
             <Image
-              src={project.image}
+              src={project.image || "/placeholder.svg"}
               alt={project.title}
               className="object-cover w-full h-48 transition-transform duration-300 group-hover:scale-105"
-              width={500} // Adjust width according to your needs
-              height={192} // Adjust height according to your needs
+              width={500}
+              height={192}
             />
             <div className="p-4">
               <h3 className="font-bold text-lg">{project.title}</h3>
               <p className="text-sm text-gray-400 mb-4">
                 {project.description}
               </p>
-
               <Button className="mb-1">
-                {" "}
                 <Link href={`/projects/${project.id}`}>View Details</Link>
               </Button>
             </div>
@@ -93,8 +116,26 @@ export default function Projects() {
           </p>
         </header>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-semibold mb-4">Web Development</h2>
+        <div className="sticky top-16 bg-gray-900 z-10 p-4 shadow-md mb-8">
+          <div className="max-w-5xl mx-auto flex justify-center space-x-4">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setActiveTab(category.id)}
+                className={`px-4 py-2 text-xs md:text-base rounded-md transition-colors ${
+                  activeTab === category.id
+                    ? "bg-purple-600 text-white"
+                    : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                }`}
+              >
+                {category.name}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <section ref={refs.web} className="mb-16">
+          <h2 className="text-3xl font-semibold mb-1">Web Development</h2>
           <p className="text-gray-400 mb-8">
             Projects showcasing modern frameworks and CMS.
           </p>
@@ -102,8 +143,8 @@ export default function Projects() {
           <div className="hidden md:block">{renderProjects(webProjects)}</div>
         </section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-semibold mb-4">UI/UX Design</h2>
+        <section ref={refs.uiux} className="mb-16">
+          <h2 className="text-3xl font-semibold mb-1">UI/UX Design</h2>
           <p className="text-gray-400 mb-8">
             Creative and user-friendly designs.
           </p>
@@ -111,8 +152,8 @@ export default function Projects() {
           <div className="hidden md:block">{renderProjects(uiuxProjects)}</div>
         </section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-semibold mb-4">Graphic Design</h2>
+        <section ref={refs.graphic} className="mb-16">
+          <h2 className="text-3xl font-semibold mb-1">Graphic Design</h2>
           <p className="text-gray-400 mb-8">
             Innovative branding and visual storytelling.
           </p>
