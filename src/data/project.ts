@@ -51,7 +51,7 @@ export const projectData = {
       id: "uiux1",
       title: "Auth Page",
       description: "Authentication Page",
-      image: "/login.jpg",
+      image: "/Login.jpg",
       tags: ["Figma", "Photoshop", "Illustrator"],
       details: "Signing up with email and password auth flow",
       pictures: [
