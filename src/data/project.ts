@@ -7,7 +7,7 @@ export const projectData = {
       image: "/Portfolio.jpg",
       details:
         "This is a personal portfolio website built with Next.js, showcasing my web development, UI/UX design, and graphic design projects. It includes interactive elements, smooth transitions, and a responsive layout to provide a seamless experience across all devices. The website also leverages Next.js' server-side rendering for fast performance and SEO optimization.",
-      tags: ["Next.js", "Framer Motion", "React", "TypeScript"],
+      tags: ["Next.js", "Framer Motion", "React", "TypeScript", "SwiperJs"],
       demo: "https://portfolio-oladeji-oluwamayowa-samuels-projects.vercel.app/",
       code: "https://github.com/Austinsahm/Portfolio.git",
       pictures: [
@@ -49,6 +49,40 @@ export const projectData = {
   uiuxProjects: [
     {
       id: "uiux1",
+      title: "Auth Page",
+      description: "Authentication Page",
+      image: "/login.jpg",
+      tags: ["Figma", "Photoshop", "Illustrator"],
+      details: "Signing up with email and password auth flow",
+      pictures: [
+        {
+          id: "1",
+          url: "/Login Page.jpg",
+          name: "Login Page",
+          description: "Login Page",
+        },
+        {
+          id: "2",
+          url: "/Create Account.jpg",
+          name: "Create Account",
+          description: "Creating Account",
+        },
+        {
+          id: "3",
+          url: "/Verify Email.jpg",
+          name: "Verify Email",
+          description: "Verifing Email",
+        },
+        {
+          id: "4",
+          url: "/Select Role.jpg",
+          name: "Select Role",
+          description: "Selecting Role",
+        },
+      ],
+    },
+    {
+      id: "uiux2",
       title: "Dashboard UI/UX",
       description: "Figma prototype for an All-In-One Social Media Platform",
       image: "/Social Software Dashboard.jpg",
@@ -65,7 +99,7 @@ export const projectData = {
       ],
     },
     {
-      id: "uiux2",
+      id: "uiux3",
       title: "CryptoTrade Hub",
       description: "A web-based process for cryptocurrency exchange.",
       image: "/CryptoTrade.jpg",
@@ -92,37 +126,37 @@ export const projectData = {
         {
           id: "1",
           url: "/CryptoTrade 1.jpg",
-          name: "Landing Page",
-          description: "Landing Page showcasing the exchange process.",
+          name: "Client Initiates Contact",
+          description: "Client Initiates Contact",
         },
         {
           id: "2",
           url: "/CryptoTrade 2.jpg",
-          name: "Landing Page",
-          description: "Landing Page showcasing the exchange process.",
+          name: "Quotation and Negotiation",
+          description: "Quotation and Negotiation",
         },
         {
           id: "3",
           url: "/CryptoTrade 3.jpg",
-          name: "Landing Page",
-          description: "Landing Page showcasing the exchange process.",
+          name: "Rate Acceptance",
+          description: "Rate Acceptance",
         },
         {
           id: "4",
           url: "/CryptoTrade 4.jpg",
-          name: "Landing Page",
-          description: "Landing Page showcasing the exchange process.",
+          name: "Transaction Details Exchange",
+          description: "Transaction Details Exchange",
         },
         {
           id: "5",
           url: "/CryptoTrade 5.jpg",
-          name: "Landing Page",
-          description: "Landing Page showcasing the exchange process.",
+          name: "Transaction Completion",
+          description: "Transaction Completion",
         },
       ],
     },
     {
-      id: "uiux3",
+      id: "uiux4",
       title: "Krypto Landing Page",
       description: "Landing page for a demo crypto company",
       image: "/Krypto.jpg",
@@ -140,7 +174,7 @@ export const projectData = {
       ],
     },
     {
-      id: "uiux4",
+      id: "uiux5",
       title: "Landing Page UI/UX",
       description: "Landing page for a company that sells tyres and batteries",
       image: "/Obat.jpg",
