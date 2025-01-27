@@ -8,6 +8,9 @@ export type Project = {
   code?: string;
   details: string;
   tags?: string[];
+  skills?: string[];
+  deliverables?: string[];
+  outcome?: string;
   pictures?: {
     id: string;
     url: string;

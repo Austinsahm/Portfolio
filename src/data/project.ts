@@ -157,6 +157,45 @@ export const projectData = {
     },
     {
       id: "uiux4",
+      title: "EstateHive",
+      image: "/EstateHive.jpg",
+      tags: ["Figma", "Photoshop", "Illustrator"],
+      details:
+        "Designed a visually appealing and user-friendly landing page for EstateHive, a platform connecting users with verified real estate agents and high-quality services. The design highlights the platform’s core values of trust, transparency, and innovation while showcasing features like agent verification, AI-powered matching, short-form video content, and an in-app marketplace.",
+      project: "EstateHive Landing Page Design",
+      description: "EstateHive Landing Page Design (Desktop & Mobile View)",
+      deliverables: [
+        "A clean, modern layout optimized for desktop and mobile devices",
+        "A trust-inspiring color palette and typography (Playfair Display and Inter)",
+        "Interactive sections such as verified agent badges, gamification rewards, and community tools",
+        "Dynamic elements like a short-form video carousel and engaging calls-to-action",
+      ],
+      skills: [
+        "UI/UX design",
+        "Responsive design",
+        "Interactive elements",
+        "Wireframes and prototyping",
+      ],
+      outcome:
+        "Successfully created a functional and visually engaging design that aligns with the platform’s vision of trust, innovation, and user engagement.",
+
+      pictures: [
+        {
+          id: "1",
+          url: "/EstateHive Screenshot.jpg",
+          name: "Landing Page",
+          description: "Landing Page (Desktop Screen)",
+        },
+        {
+          id: "2",
+          url: "/EstateHive Mobile.jpg",
+          name: "Landing Page",
+          description: "Landing Page (Mobile Screen)",
+        },
+      ],
+    },
+    {
+      id: "uiux5",
       title: "Krypto Landing Page",
       description: "Landing page for a demo crypto company",
       image: "/Krypto.jpg",
@@ -174,7 +213,7 @@ export const projectData = {
       ],
     },
     {
-      id: "uiux5",
+      id: "uiux6",
       title: "Landing Page UI/UX",
       description: "Landing page for a company that sells tyres and batteries",
       image: "/Obat.jpg",

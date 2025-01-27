@@ -1,3 +1,4 @@
+
 import { findProjectById } from "@/data/project";
 import { Project } from "@/data/types";
 import Image from "next/image";
@@ -60,7 +61,26 @@ export default async function ProjectDetails({
 
         {/* Project Details */}
         {project.details && (
-          <p className="text-gray-400 mb-6">{project.details}</p>
+          <p className="text-gray-300 mb-6">{project.details}</p>
+        )}
+
+        {/* Project Deliverables */}
+        {project.deliverables && project.deliverables.length > 0 && (
+          <div className="w-full bg-gray-900 rounded-lg shadow-md p-6 mb-8">
+            <h2 className="text-xl font-bold mb-6 text-purple-500">
+              Project Deliverables
+            </h2>
+            <ol className="list-decimal pl-8 space-y-3">
+              {project.deliverables.map((deliverable, index) => (
+                <li
+                  key={index}
+                  className="text-gray-300 leading-relaxed hover:text-white transition-colors"
+                >
+                  {deliverable}
+                </li>
+              ))}
+            </ol>
+          </div>
         )}
 
         {/* Project Links */}
