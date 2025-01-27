@@ -1,5 +1,5 @@
-
 import { findProjectById } from "@/data/project";
+import { ChevronDown, ExternalLink, Code } from "lucide-react";
 import { Project } from "@/data/types";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -26,94 +26,135 @@ export default async function ProjectDetails({
           </h1>
         )}
 
-        {/* Main Project Image */}
-        <Image
-          src={project.image || "/placeholder.svg"}
-          alt={project.title || "Project Image"}
-          className="w-full rounded-lg shadow-lg mb-8"
-          priority
-          unoptimized
-          width={500}
-          height={300}
-        />
-
-        {/* Technologies Used */}
-        {project.tags && project.tags.length > 0 && (
-          <div className="mb-6">
-            <h2 className="text-2xl font-semibold mb-2">Technologies Used</h2>
-            <div className="flex flex-wrap gap-2">
-              {project.tags.map((tag, index) => (
-                <span
-                  key={index}
-                  className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm"
-                >
-                  {tag}
-                </span>
-              ))}
+        <div className="grid md:grid-cols-2 gap-8">
+          <div>
+            {/* Main Project Image */}
+            <div>
+              <Image
+                src={project.image || "/placeholder.svg"}
+                alt={project.title || "Project Image"}
+                className="w-full rounded-lg shadow-lg mb-8"
+                width={800}
+                height={600}
+                priority
+                unoptimized
+              />
             </div>
-          </div>
-        )}
 
-        {/* Project Description */}
-        {project.description && (
-          <p className="text-lg mb-4">{project.description}</p>
-        )}
-
-        {/* Project Details */}
-        {project.details && (
-          <p className="text-gray-300 mb-6">{project.details}</p>
-        )}
-
-        {/* Project Deliverables */}
-        {project.deliverables && project.deliverables.length > 0 && (
-          <div className="w-full bg-gray-900 rounded-lg shadow-md p-6 mb-8">
-            <h2 className="text-xl font-bold mb-6 text-purple-500">
-              Project Deliverables
-            </h2>
-            <ol className="list-decimal pl-8 space-y-3">
-              {project.deliverables.map((deliverable, index) => (
-                <li
-                  key={index}
-                  className="text-gray-300 leading-relaxed hover:text-white transition-colors"
-                >
-                  {deliverable}
-                </li>
-              ))}
-            </ol>
-          </div>
-        )}
-
-        {/* Project Links */}
-        {(project.demo || project.code) && (
-          <div className="flex gap-4 mb-8">
-            {project.demo && (
-              <a
-                href={project.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-              >
-                View Demo
-              </a>
+            {/* Technologies Used */}
+            {project.tags && project.tags.length > 0 && (
+              <div className="mb-6">
+                <h2 className="text-2xl font-semibold mb-2">
+                  Technologies Used
+                </h2>
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
             )}
-            {project.code && (
-              <a
-                href={project.code}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-              >
-                View Code
-              </a>
+
+            {/* Project Links */}
+            {(project.demo || project.code) && (
+              <div className="flex gap-4 mb-8">
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center"
+                  >
+                    <ExternalLink className="mr-2" size={18} />
+                    View Demo
+                  </a>
+                )}
+                {project.code && (
+                  <a
+                    href={project.code}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded flex items-center"
+                  >
+                    <Code className="mr-2" size={18} />
+                    View Code
+                  </a>
+                )}
+              </div>
             )}
           </div>
-        )}
+
+          <div>
+            {/* Project Description */}
+            {project.description && (
+              <p className="text-lg mb-4">{project.description}</p>
+            )}
+
+            {/* Project Details */}
+            {project.details && (
+              <p className="text-gray-300 mb-6">{project.details}</p>
+            )}
+
+            {/* Project Deliverables */}
+            {project.deliverables && project.deliverables.length > 0 && (
+              <details className="w-full bg-gray-800 rounded-lg shadow-md p-6 mb-8">
+                <summary className="text-xl font-bold mb-4 text-purple-500 flex justify-between items-center cursor-pointer">
+                  Project Deliverables
+                  <ChevronDown
+                    size={20}
+                    className="inline-block transform transition-transform duration-200"
+                  />
+                </summary>
+                <ol className="list-decimal pl-8 space-y-3 mt-4">
+                  {project.deliverables.map((deliverable, index) => (
+                    <li
+                      key={index}
+                      className="text-gray-300 leading-relaxed hover:text-white transition-colors"
+                    >
+                      {deliverable}
+                    </li>
+                  ))}
+                </ol>
+              </details>
+            )}
+
+            {/* Skills */}
+            {project.skills && project.skills.length > 0 && (
+              <div className="mb-6">
+                <h2 className="text-2xl font-semibold mb-2">Skills</h2>
+                <div className="flex flex-wrap gap-2">
+                  {project.skills.map((skill, index) => (
+                    <span
+                      key={index}
+                      className="bg-gray-700 text-white px-3 py-1 rounded-full text-sm"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Outcome */}
+            {project.outcome && (
+              <div className="mb-8">
+                <h2 className="text-2xl font-semibold mb-2">Outcome</h2>
+                <p className="text-gray-300">{project.outcome}</p>
+              </div>
+            )}
+          </div>
+        </div>
 
         {/* Project Gallery */}
         {project.pictures && project.pictures.length > 0 && (
-          <div className="w-full">
+          <div className="w-full mt-12">
             <h2 className="text-2xl font-semibold mb-4">Project Gallery</h2>
-            <div className="grid grid-cols-1 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
               {project.pictures.map((picture) => (
                 <div key={picture.id} className="relative">
                   {picture.description && (
@@ -124,12 +165,11 @@ export default async function ProjectDetails({
                   <Image
                     src={picture.url || "/placeholder.svg"}
                     alt={picture.name || "Project Image"}
-                    width={500}
-                    height={0}
-                    style={{ height: "auto" }}
-                    unoptimized
-                    priority
+                    width={800}
+                    height={600}
                     className="rounded-lg shadow-md w-full"
+                    priority
+                    unoptimized
                   />
                 </div>
               ))}
