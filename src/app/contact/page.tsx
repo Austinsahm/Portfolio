@@ -41,7 +41,7 @@ export default function Contact() {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="text-purple-400" />
-                <span>Ibadan, Nigeria</span>
+                <span>Nigeria</span>
               </div>
             </div>
 

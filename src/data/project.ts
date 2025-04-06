@@ -27,13 +27,13 @@ export const projectData = {
     },
     {
       id: "wp2",
-      title: "All-Glow Website",
+      title: "Trineworks Website",
       description: "Built with CMS (Wordpress)",
-      image: "/All-Glow.jpg",
-      tags: ["WordPress", "WpBakery"],
-      demo: "https://allglowagroalliedltd.com.ng/",
+      image: "/trineworks.png",
+      tags: ["WordPress", "Elementor"],
+      demo: "https://trineworks.com.ng/",
       details:
-        "All-Glow's website was built with WordPress as a content management system (CMS) to showcase their products and services. The website features an intuitive user interface, easy navigation, and a blog section for product updates and customer engagement. The design is mobile-responsive, ensuring a great experience on any device.",
+        "Trineworks's website was built with WordPress as a content management system (CMS) to showcase their products and services. The website features an intuitive user interface, easy navigation, and a blog section for product updates and customer engagement. The design is mobile-responsive, ensuring a great experience on any device.",
     },
     {
       id: "wp3",
@@ -44,6 +44,16 @@ export const projectData = {
       tags: ["WordPress", "Elementor"],
       details:
         "Orbitmile is a travel and booking website developed using WordPress. The project integrates a custom booking system that allows users to easily search and book flights, hotels, and activities. The design is clean and modern, with a focus on usability and intuitive navigation, ensuring a seamless experience for travelers.",
+    },
+    {
+      id: "wp4",
+      title: "All-Glow Website",
+      description: "Built with CMS (Wordpress)",
+      image: "/All-Glow.jpg",
+      tags: ["WordPress", "WpBakery"],
+      demo: "https://allglowagroalliedltd.com.ng/",
+      details:
+        "All-Glow's website was built with WordPress as a content management system (CMS) to showcase their products and services. The website features an intuitive user interface, easy navigation, and a blog section for product updates and customer engagement. The design is mobile-responsive, ensuring a great experience on any device.",
     },
   ],
   uiuxProjects: [
