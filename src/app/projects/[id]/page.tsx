@@ -17,11 +17,11 @@ export default async function ProjectDetails({
   }
 
   return (
-    <main className="min-h-screen pt-20 p-8 md:p-24 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+    <main className="min-h-screen pt-20 p-8 md:p-24 bg-linear-to-br from-gray-900 to-gray-800 text-white">
       <div className="max-w-7xl mx-auto">
         {/* Project Title */}
         {project.title && (
-          <h1 className="text-4xl md:text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
+          <h1 className="text-4xl md:text-5xl font-bold mb-8 bg-clip-text text-transparent bg-linear-to-r from-purple-400 to-pink-600">
             {project.title}
           </h1>
         )}

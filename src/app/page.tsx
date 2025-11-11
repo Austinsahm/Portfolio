@@ -15,8 +15,8 @@ import {
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-8 xs:pt-16 md:p-24 bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+    <main className="flex min-h-screen flex-col items-center justify-center p-8 xs:pt-16 md:p-24 bg-linear-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
+      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center mask-[linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -41,7 +41,7 @@ export default function Home() {
           </motion.div>
           <div className="flex flex-col items-center md:items-start">
             <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 md:text-left bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600"
+              className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 md:text-left bg-clip-text text-transparent bg-linear-to-r from-purple-400 to-pink-600"
               initial={{ scale: 0.5 }}
               animate={{ scale: 1 }}
               transition={{ type: "spring", stiffness: 260, damping: 20 }}

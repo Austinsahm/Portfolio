@@ -59,7 +59,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-100 hover:text-blue-600 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-100 hover:text-blue-600 focus:outline-hidden"
             >
               {isOpen ? (
                 <X className="block h-6 w-6" aria-hidden="true" />
@@ -79,7 +79,7 @@ export default function Navbar() {
           transition={{ duration: 0.3 }}
           className="md:hidden"
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900/90 backdrop-blur-sm shadow-lg">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900/90 backdrop-blur-xs shadow-lg">
             {navItems.map((item) => (
               <Link
                 key={item.name}

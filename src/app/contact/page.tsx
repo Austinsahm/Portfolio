@@ -7,7 +7,7 @@ export default function Contact() {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white pt-20 p-8 md:p-24">
+    <div className="min-h-screen bg-linear-to-br from-gray-900 to-gray-800 text-white pt-20 p-8 md:p-24">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -18,7 +18,7 @@ export default function Contact() {
           initial={{ y: -50 }}
           animate={{ y: 0 }}
           transition={{ type: "spring", stiffness: 200, damping: 20 }}
-          className="text-4xl md:text-5xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600"
+          className="text-4xl md:text-5xl font-bold mb-8 text-center bg-clip-text text-transparent bg-linear-to-r from-purple-400 to-pink-600"
         >
           Get In Touch
         </motion.h1>
