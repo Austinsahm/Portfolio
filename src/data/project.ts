@@ -2,6 +2,37 @@ export const projectData = {
   webProjects: [
     {
       id: "wp1",
+      title: "All-Glow Website",
+      description: "Built with CMS (Wordpress)",
+      image: "/All-Glow.jpg",
+      tags: ["WordPress", "Elementor"],
+      demo: "https://allglowaa.com/",
+      details:
+        "All-Glow's website was built with WordPress as a content management system (CMS) to showcase their products and services. The website features an intuitive user interface, easy navigation, and a blog section for product updates and customer engagement. The design is mobile-responsive, ensuring a great experience on any device.",
+    },
+    {
+      id: "wp2",
+      title: "Trineworks Website",
+      description: "Built with CMS (Wordpress)",
+      image: "/trineworks.png",
+      tags: ["WordPress", "Elementor"],
+      demo: "https://trineworks.com.ng/",
+      details:
+        "Trineworks's website was built with WordPress as a content management system (CMS) to showcase their products and services. The website features an intuitive user interface, easy navigation, and a blog section for product updates and customer engagement. The design is mobile-responsive, ensuring a great experience on any device.",
+    },
+    {
+      id: "wp3",
+      title: "Orbitmile",
+      description: "Built with CMS (Wordpress)",
+      image: "/orbitmile.jpg",
+      demo: "https://orbitmile.com.ng/",
+      tags: ["WordPress", "Elementor"],
+      details:
+        "Orbitmile is a travel and booking website developed using WordPress. The project integrates a custom booking system that allows users to easily search and book flights, hotels, and activities. The design is clean and modern, with a focus on usability and intuitive navigation, ensuring a seamless experience for travelers.",
+    },
+
+    {
+      id: "wp4",
       title: "My Portfolio",
       description: "Built with Next.js and framer motion",
       image: "/Portfolio.jpg",
@@ -24,36 +55,6 @@ export const projectData = {
           description: "About Page",
         },
       ],
-    },
-    {
-      id: "wp2",
-      title: "Trineworks Website",
-      description: "Built with CMS (Wordpress)",
-      image: "/trineworks.png",
-      tags: ["WordPress", "Elementor"],
-      demo: "https://trineworks.com.ng/",
-      details:
-        "Trineworks's website was built with WordPress as a content management system (CMS) to showcase their products and services. The website features an intuitive user interface, easy navigation, and a blog section for product updates and customer engagement. The design is mobile-responsive, ensuring a great experience on any device.",
-    },
-    {
-      id: "wp3",
-      title: "Orbitmile",
-      description: "Built with CMS (Wordpress)",
-      image: "/orbitmile.jpg",
-      demo: "https://orbitmile.com.ng/",
-      tags: ["WordPress", "Elementor"],
-      details:
-        "Orbitmile is a travel and booking website developed using WordPress. The project integrates a custom booking system that allows users to easily search and book flights, hotels, and activities. The design is clean and modern, with a focus on usability and intuitive navigation, ensuring a seamless experience for travelers.",
-    },
-    {
-      id: "wp4",
-      title: "All-Glow Website",
-      description: "Built with CMS (Wordpress)",
-      image: "/All-Glow.jpg",
-      tags: ["WordPress", "WpBakery"],
-      demo: "https://allglowagroalliedltd.com.ng/",
-      details:
-        "All-Glow's website was built with WordPress as a content management system (CMS) to showcase their products and services. The website features an intuitive user interface, easy navigation, and a blog section for product updates and customer engagement. The design is mobile-responsive, ensuring a great experience on any device.",
     },
   ],
   uiuxProjects: [
@@ -243,21 +244,21 @@ export const projectData = {
   graphicProjects: [
     {
       id: "gp1",
-      title: "TFC Poster",
-      description: "Brand Flyer (Fashion)",
-      image: "/TFC.jpg",
+      title: "Rashford Poster",
+      description: "Sport Social Media Poster",
+      image: "/Rashford.jpg",
       tags: ["Photoshop", "Illustrator"],
       details:
-        "This fashion poster was created for Tee Famous Collection (TFC), a fashion brand. The design captures the brand’s youthful and trendy spirit, incorporating bold typography, striking colors, and modern graphics. The flyer promotes the latest collection, with a focus on casual wear, and is designed to capture the attention of fashion enthusiasts.",
+        "This sport poster was created for Rashford Marcus, a footballer. The design captures the footballer youthful and trendy spirit, incorporating bold typography, striking colors, and modern graphics. The flyer promotes the latest match, with a focus on casual wear, and is designed to capture the attention of sports enthusiasts.",
     },
     {
       id: "gp2",
-      title: "AKA GENTS Poster",
-      description: "Brand Flyer (Fashion)",
-      image: "/Aka Gents.jpg",
+      title: "Oraimo Poster",
+      description: "A Brand Social Media Poster Ads",
+      image: "/Burna.jpg",
       tags: ["Photoshop", "Illustrator"],
       details:
-        "This poster was created for AKA GENTS, a limited training program for aspiring gentlemen. The design incorporates sophisticated typography, elegant color schemes, and imagery that reflects the brand’s upscale, exclusive nature. The flyer aims to evoke a sense of professionalism and luxury, encouraging people to sign up for the limited slots available.",
+        "This brand poster was created for Oraimo and Burna Boy. The design captures Burna youthful and trendy spirit, incorporating bold typography, striking colors, and modern graphics. The flyer promotes the latest Oraimo products, with a focus on casual wear, and is designed to capture the attention of tech enthusiasts.",
     },
     {
       id: "gp3",
@@ -303,6 +304,24 @@ export const projectData = {
       tags: ["Photoshop", "Illustrator"],
       details:
         "This brand flyer was designed for Nike to promote their latest shoe collection. The design incorporates bold imagery, strong typography, and energetic visuals to reflect the athletic and performance-driven nature of the brand. The flyer showcases the shoes in action, targeting fitness enthusiasts and sports lovers.",
+    },
+    {
+      id: "gp8",
+      title: "AKA GENTS Poster",
+      description: "Brand Flyer (Fashion)",
+      image: "/Aka Gents.jpg",
+      tags: ["Photoshop", "Illustrator"],
+      details:
+        "This poster was created for AKA GENTS, a limited training program for aspiring gentlemen. The design incorporates sophisticated typography, elegant color schemes, and imagery that reflects the brand’s upscale, exclusive nature. The flyer aims to evoke a sense of professionalism and luxury, encouraging people to sign up for the limited slots available.",
+    },
+    {
+      id: "gp9",
+      title: "TFC Poster",
+      description: "Brand Flyer (Fashion)",
+      image: "/TFC.jpg",
+      tags: ["Photoshop", "Illustrator"],
+      details:
+        "This fashion poster was created for Tee Famous Collection (TFC), a fashion brand. The design captures the brand’s youthful and trendy spirit, incorporating bold typography, striking colors, and modern graphics. The flyer promotes the latest collection, with a focus on casual wear, and is designed to capture the attention of fashion enthusiasts.",
     },
   ],
 };
